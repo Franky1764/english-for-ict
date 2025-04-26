@@ -1,0 +1,7 @@
+{
+  "name": "english-for-ict",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
