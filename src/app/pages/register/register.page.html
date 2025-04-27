@@ -1,13 +1,55 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>register</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content class="ion-padding">
+  <div class="register-container">
+    <h2>Create Your Account</h2>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">register</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <ion-item>
+      <ion-label position="floating">Full Name</ion-label>
+      <ion-input [(ngModel)]="name" type="text" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input [(ngModel)]="email" type="email" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Phone</ion-label>
+      <ion-input [(ngModel)]="phone" type="tel" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Comuna</ion-label>
+      <ion-input [(ngModel)]="comuna" type="text" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Region</ion-label>
+      <ion-input [(ngModel)]="region" type="text" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input [(ngModel)]="password" [type]="showPassword ? 'text' : 'password'" required></ion-input>
+      <ion-button fill="clear" size="small" slot="end" (click)="togglePasswordVisibility()">
+        <ion-icon [name]="showPasswordIcon"></ion-icon>
+      </ion-button>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Confirm Password</ion-label>
+      <ion-input [(ngModel)]="confirmPassword" [type]="showConfirmPassword ? 'text' : 'password'" required></ion-input>
+      <ion-button fill="clear" size="small" slot="end" (click)="toggleConfirmPasswordVisibility()">
+        <ion-icon [name]="showConfirmPasswordIcon"></ion-icon>
+      </ion-button>
+    </ion-item>
+
+    <ion-button expand="block" (click)="register()" class="register-button">
+      Register
+    </ion-button>
+
+    <div class="login-link">
+      <p>Already have an account?</p>
+      <ion-button fill="clear" routerLink="/login">Login</ion-button>
+    </div>
+  </div>
 </ion-content>
