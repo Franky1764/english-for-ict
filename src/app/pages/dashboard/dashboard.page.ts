@@ -1,20 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
+import { Router } from '@angular/router';
+import { IonContent, IonCard, IonCardContent, IonIcon } from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.page.html',
   styleUrls: ['./dashboard.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
+  imports: [IonContent, IonCard, IonCardContent, IonIcon, CommonModule]
 })
-export class DashboardPage implements OnInit {
+export class DashboardPage {
+  constructor(private router: Router) {}
 
-  constructor() { }
-
-  ngOnInit() {
+  goTo(page: string) {
+    this.router.navigate(['/' + page]);
   }
-
 }
