@@ -1,46 +1,54 @@
+ion-content {
+  --background: linear-gradient(180deg, #E6E6FA 0%, #FFFFFF 100%);
+}
+
 .welcome-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    text-align: center;
-    padding: 20px;
-  
-    .logo {
-      width: 150px;
-      margin-bottom: 20px;
-    }
-  
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 0;
-      color: #555;
-    }
-  
-    h2 {
-      font-size: 2.5rem;
-      color: #8B5CF6;
-      margin-top: 0;
-      font-weight: bold;
-    }
-  
-    p {
-      margin: 20px 0;
-      font-size: 1.2rem;
-      color: #666;
-    }
-  
-    .start-button {
-      margin-top: 30px;
-      font-size: 1.1rem;
-    }
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+  padding: 20px;
+
   .gatita {
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
     margin-bottom: 20px;
     border-radius: 50%;
     object-fit: cover;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }  
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 0;
+    color: #5A9BD5; /* Azul medio */
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    margin-top: 0;
+    font-weight: bold;
+    color: #8B5CF6; /* Violeta MMT */
+  }
+
+  p {
+    margin: 20px 0;
+    font-size: 1.2rem;
+    color: #666;
+  }
+
+  .start-button {
+    margin-top: 30px;
+    font-size: 1.1rem;
+    width: 80%;
+    max-width: 300px;
+    border-radius: 25px;
+    --background: linear-gradient(90deg, #8B5CF6, #5A9BD5);
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+  }
+}

@@ -1,38 +1,68 @@
+ion-content {
+  --background: linear-gradient(180deg, #E6E6FA 0%, #FFFFFF 100%);
+}
+
 .register-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    padding: 20px;
-  
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #8B5CF6;
-      font-weight: bold;
-    }
-  
-    ion-item {
-      margin-bottom: 20px;
-      width: 100%;
-    }
-  
-    .register-button {
-      margin-top: 20px;
-      font-size: 1.1rem;
-    }
-  
-    .login-link {
-      margin-top: 20px;
-      text-align: center;
-      font-size: 1rem;
-      color: #666;
-    }
-    
-    ion-item ion-button {
-        --padding-start: 0;
-        --padding-end: 0;
-      }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 20px;
+
+  h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #8B5CF6;
+    font-weight: bold;
+    text-align: center;
   }
-  
+
+  ion-item {
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 400px;
+    --background: #ffffff;
+    --border-radius: 15px;
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --padding-start: 10px;
+    --padding-end: 10px;
+  }
+
+  ion-label {
+    font-size: 1rem;
+    color: #666;
+  }
+
+  ion-input {
+    font-size: 1rem;
+    color: #333;
+  }
+
+  .register-button {
+    margin-top: 25px;
+    font-size: 1.1rem;
+    width: 80%;
+    max-width: 300px;
+    border-radius: 25px;
+    --background: linear-gradient(90deg, #8B5CF6, #5A9BD5);
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+  }
+
+  .login-link {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #555;
+    text-align: center;
+
+    ion-button {
+      font-size: 0.9rem;
+      color: #5A9BD5;
+      font-weight: bold;
+      text-transform: none;
+    }
+  }
+}
